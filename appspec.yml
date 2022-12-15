@@ -1,5 +1,7 @@
 version: 0.0
 os: linux
+runas: root
+
 files:
   - source: /
     destination: /home/ubuntu/nodejs_backend/
