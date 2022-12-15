@@ -1,0 +1,24 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/nodejs_backend/
+    overwrite: true
+    timeout: 500
+files_exists_behaviour: OVERWRITE
+
+hooks:
+  BeforeInstall:
+    - location: script/install.sh
+      timeout: 300
+      runas: root
+      
+  ApplicationStop:
+    - location: script/stop.sh
+      timeout: 300
+      runas: root
+  
+  ApplicationStart:
+    - location: script/start.sh
+      timeout: 300
+      runas: root
