@@ -4,7 +4,7 @@ env:
     MONGODB_URL: "PRAJWAL_MONGO_SECRET:mongodb_url"
     
 phases: 
-  pre-build:
+  pre_build:
     commands: 
       - echo Build started on `date`
       - echo "MONGODB_URL_PRAJWAL=$MONGODB_URL" > .env
@@ -14,7 +14,7 @@ phases:
       - npm install
       - npm install --save dotenv
       
-  post-build:
+  post_build:
     commands: 
       - echo Build completed on `date`
       
