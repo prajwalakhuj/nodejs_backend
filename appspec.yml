@@ -10,16 +10,16 @@ files_exists_behaviour: OVERWRITE
 
 hooks:
   BeforeInstall:
-    - location: script/install.sh
+    - location: scripts/install.sh
       timeout: 300
       runas: root
       
   ApplicationStop:
-    - location: script/stop.sh
+    - location: scripts/stop.sh
       timeout: 300
       runas: root
   
   ApplicationStart:
-    - location: script/start.sh
+    - location: scripts/start.sh
       timeout: 300
       runas: root
