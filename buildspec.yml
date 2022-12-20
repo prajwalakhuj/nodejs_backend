@@ -12,7 +12,6 @@ phases:
   build:
     commands: 
       - npm install
-      - npm install --save dotenv
       
   post_build:
     commands: 
